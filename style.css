@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(233, 47%, 7%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 80%;
+  background: hsl(244, 38%, 16%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+
+.image-content, .text-content {
+  flex: 1;
+}
+
+.text-content {
+  padding: 2rem 4rem;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  font-family: "Inter", serif;
+  font-weight: 700;
+}
+
+.highlightedh1 {
+  color: hsl(277, 64%, 61%);
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: "Lexend Deca", serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  max-width: 87%;
+  line-height: 30px;
+}
+
+.main-range {
+  display: grid;
+  margin: 3rem 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ranges {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+span.range-value {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: block;
+  padding-top: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.image-content {
+  background: hsl(277, 64%, 61%) url(./images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border-radius: 0px 20px 20px 0px;
+}
+
+@media screen and (max-width:1000px){
+
+  html {
+    font-size:12px;
+  }
+
+  .main {
+    height: auto;
+    padding: 3rem 0;
+  }
+  .container {
+    flex-direction: column-reverse;
+    max-width: 85%;
+  }
+
+  .text-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.text-content h1 {
+  font-size: 2.3rem;
+ 
+}
+
+.text-content p {
+  max-width: 100%;
+  line-height: 25px;
+  font-size: 1.2rem;
+}
+  .main-range {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.image-content {
+  width: 100%; 
+  min-height: 200px; 
+  background: hsl(277, 64%, 61%) url(./images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border-radius: 20px 20px 0px 0px;
+}
+
+}
